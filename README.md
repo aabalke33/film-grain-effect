@@ -74,6 +74,7 @@ public class Example {
 ## FAQ
 1. **Why do I get a Memory Heap Error?** You have too many threads. Lower maxThreads until stable. The multithreading gains significantly diminish if maxThreads is greater than the Physical CPU Core count. maxThreads defaults to 4 since this is the average amount of CPU cores at creation.
 2. **How does the durationMultiplier work?** The durationMultiplier increases the output duration (in frames) by the source duration (in frames) * durationMultiplier. This is useful if you want to create a clip of a still image for 24 frames and you want the grain to overlay each frame. In this situation, the multiplier would be 24. If the private master grain method is accessed and the durationMultiplier set on an Array of images, the number of output frames will be the number of source frames * the multipler.
+3. **Why are my composite frames out of order?** The source and grain frames are ordered by name left to right, you will need to have padded zeros to keep serialized frame names in order. If you don't do this you will have problems (ex. if you have 200 frames the order will be "1.jpg, 10.jpg, 100.jpg, 2.jpg, 20.jpg, 200.jpg" instead of "1.jpg, 2.jpg, 3.jpg")
 
 ## Roadmap
 - Add support for video files directly instead of relying on frame sequences
