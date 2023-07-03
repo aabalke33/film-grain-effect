@@ -114,7 +114,6 @@ public class GrainEffect {
      * @param outputFolder An output folder location for the composite images.
      * @param opacity The opacity of the grain over the source.
      */
-    // grain method for video frames without threads given
     public static void grain(ArrayList<File> source, ArrayList<File> grainFrames,
                               File outputFolder, double opacity) {
         grain(source, grainFrames, outputFolder, opacity, 1, 4);
