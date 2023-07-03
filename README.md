@@ -19,17 +19,17 @@ Methods are overloaded. Allows methods for a single source image or an array of 
 ```java
 // With maxThreads
   // For Single Image
-  videoEffects.grain(sourceImage, grain, outputFolder, opacity, durationMultiplier, maxThreads);
+  GrainEffect.grain(sourceImage, grain, outputFolder, opacity, durationMultiplier, maxThreads);
 
   // For Array of Images
-  videoEffects.grain(sourceImages, grain, outputFolder, opacity, maxThreads);
+  GrainEffect.grain(sourceImages, grain, outputFolder, opacity, maxThreads);
 
 // Without maxThreads (Default 4)
   // For Single Image
-  videoEffects.grain(sourceImage, grain, outputFolder, opacity, durationMultiplier);
+  GrainEffect.grain(sourceImage, grain, outputFolder, opacity, durationMultiplier);
 
   // For Array of Images
-  videoEffects.grain(sourceImages, grain, outputFolder, opacity);
+  GrainEffect.grain(sourceImages, grain, outputFolder, opacity);
 
 ```
 
